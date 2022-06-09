@@ -4,7 +4,7 @@ use std::{
     str::FromStr,
 };
 
-#[derive(Clone, Debug)]
+#[derive(Clone, Debug, Copy)]
 pub enum AstronautJob {
     Biogeochemist,
     Biologist,
@@ -35,7 +35,7 @@ impl FromStr for AstronautJob {
     }
 }
 
-#[derive(Debug)]
+#[derive(Debug, Copy, Clone)]
 pub struct Candidate {
     pub primary_job: AstronautJob,
     pub secondary_job: Option<AstronautJob>,
